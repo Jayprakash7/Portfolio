@@ -1,0 +1,294 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(90deg, rgb(41, 31, 66), black);
+    height: 3000px;
+}
+
+#navbar {
+    transition: top 0.3s;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, rgb(38, 32, 49), black);
+    padding: 10px 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.8);
+    position: sticky;
+    height: 70px;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #64dbd5;
+    font-size: 18px;
+    padding: 12px 20px;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 30px;
+}
+
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #fff;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 150px;
+}
+
+.image-container {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.image-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: blur(10px);
+    z-index: -1;
+    border-radius: 50%;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.animated-text {
+    font-size: 56px;
+    color: #64dbd5;
+    line-height: 1.0;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    animation: typing 3s steps(30, end), blink-caret 0.75s step-end infinite;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.typing-text::before {
+    content: "I am Jayprakash";
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 40%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #fff; }
+}
+
+.about-me {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.8);
+    max-width: 800px;
+    margin: 220px auto;
+}
+
+.about-me h2 {
+    margin-top: 0;
+}
+
+.about-me p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.skills {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+.skills h2 {
+    margin-top: 0;
+}
+
+.skill-bar {
+    margin: 15px 0;
+}
+
+.skill-bar p {
+    margin: 0 0 5px 0;
+}
+
+.bar {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    height: 20px;
+}
+
+.bar div {
+    height: 100%;
+    border-radius: 5px;
+}
+
+.html {
+    width: 90%;
+    background-color: #e34c26;
+}
+
+.css {
+    width: 80%;
+    background-color: #264de4;
+}
+
+.javascript {
+    width: 70%;
+    background-color: #f0db4f;
+}
+
+.php {
+    width: 75%;
+    background-color: #474a8a;
+}
+
+.mysql {
+    width: 85%;
+    background-color: #00758f;
+}
+.aws {
+    width: 95%;
+    background-color: #12d91c;
+}
+.java {
+    width: 90%;
+    background-color: #d80d68;
+}
+.react {
+    width: 50%;
+    background-color: #2a0a93;
+}
+
+.achievements {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    margin: 120px auto;
+}
+
+.achievements h2 {
+    margin-top: 0;
+}
+
+.achievements ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.achievements ul li {
+    padding: 10px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+.achievements ul li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: #00ff00;
+}
+
+.projects {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+.projects h2 {
+    margin-top: 0;
+}
+
+.project-card {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px 0;
+    padding: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.project-card h3 {
+    margin: 10px 0;
+}
+
+.project-card p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.project-card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.project-card a:hover {
+    background-color: #0056b3;
+}
